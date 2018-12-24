@@ -50,6 +50,8 @@
     <OutDir>.\output\python_pjsua-i386-win32-vc8-release\</OutDir>
     <IntDir>$(OutDir)</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Py32\include;D:\IW Main\pjproject\pjlib\include;D:\IW Main\pjproject\pjlib-util\include;D:\IW Main\pjproject\pjmedia\include;D:\IW Main\pjproject\pjnath\include;D:\IW Main\pjproject\pjsip\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Py32\libs;D:\IW Main\pjproject\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -126,7 +128,7 @@
       <Culture>0x0421</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>python24.lib;odbc32.lib;odbccp32.lib;dsound.lib;dxguid.lib;netapi32.lib;mswsock.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>python27.lib;odbc32.lib;odbccp32.lib;dsound.lib;dxguid.lib;netapi32.lib;mswsock.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\lib\_pjsua.pyd</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../pjlib/lib;../../pjlib-util/lib;../../pjmedia/lib;../../pjsip/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -142,6 +144,9 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <OutputFile>.\output\python_pjsua-i386-win32-vc6-release/python_pjsua.bsc</OutputFile>
     </Bscmake>
+    <CustomBuildStep>
+      <Command>PJ_WIN32=1</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\python\_pjsua.c" />
