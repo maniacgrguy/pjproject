@@ -1,3 +1,18 @@
+ The target of this project is to help windows user to compile and build PJSIP library using Visual Studio.
+ Steps to build this project :-
+ 1. Build pjsua project.
+ 2. Build python_pjsua project.
+ The output _pjsua.pyd will be placed  pjproject\pjsip-apps\lib folder.
+ 
+ _pjsua.pyd is the file used by python.
+ You can install this file to your python.
+  
+ Steps to install _pjsua :-
+ 1. Goto directory pjproject\pjsip-apps\src\python run the command 'python setup-vc.py install'
+ This will install the pjsua to python.
+
+ 
+ 
  Copyright (C) 2003-2008 Benny Prijono <benny@prijono.org>
  Copyright (C) 2008-2011 Teluu Inc. (http://www.teluu.com)
 
